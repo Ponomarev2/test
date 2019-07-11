@@ -1,0 +1,12 @@
+{% extends "vapp/wrapper.html" %}
+
+{% block content %}
+<form action="/search" method="post" style="position: absolute;top: 40%; left: 25%;">
+    {% csrf_token %}
+    <input type="text" name="name" title="Введите имя" placeholder="Имя">
+    <input type="text" name="surname" title="Введите фамилию" placeholder="Фамилия"><i style="color:#ffb700"> Или </i>
+    <input type="text" name="nomer" title="Введите Номер зачетки" placeholder="Номер зачетки">
+    <button type="submit">Увидеть оценки</button>
+</form>
+<!--{% include "vapp/includes/incl1.html "%}-->
+{% endblock %}

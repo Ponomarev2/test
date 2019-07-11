@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Оценки</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
@@ -19,7 +19,7 @@ BODY {
   }
  table{border: 1px solid #000000;}
 thead{border: 2.1px solid #000000;}
-tr:hover {background-color: #c0c0c0;}
+tr:hover {background-color: #ffb700;}
 th, td {
   border: 0.5px solid #000000;
   font-size:16pt;
@@ -35,12 +35,12 @@ caption {
   caption:hover {
     text-shadow: 1px 1px white,
                  2px 2px black;
-    color: #556B2F;
+    color: #ffb700;
     }
 </style>
     {% block content %}
 <table id="table-id" class="table">
-  <caption style="font-size:26pt;">Ведомость успеваемости {{ nomer.items }}</caption>
+  <caption style="font-size:26pt;">Ведомость успеваемости {% for j in nomer %}{{j}}{% endfor %}</caption>
     <thead>
           <tr>
             <th>Название предмета</th>
